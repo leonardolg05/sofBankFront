@@ -1,0 +1,35 @@
+  <div class="container">
+  <h1>Bienvenidos a Bluesoft Bank</h1>
+
+<!--
+
+  <app-account-details [account]="currentAccount"></app-account-details>
+
+  <app-transaction-form (transactionMade)="handleTransaction($event)"></app-transaction-form>
+
+  <app-transaction-history [transactions]="transactionSimp"></app-transaction-history>
+-->
+  <!--<app-monthly-statements 
+    [month]="selectedMonth" 
+    [statement]="monthlyStatement">
+  </app-monthly-statements>-->
+
+ <!-- <app-reports 
+  [topCustomers]="topCustomers" 
+  [outOfCityWithdrawals]="outOfCityWithdrawals">
+</app-reports>
+</div>
+-->
+
+<div class="home-container">
+  <p>Seleccione una opción:</p>
+  <button routerLink="accounts">Contact</button>
+  <div class="options-grid">
+    <div *ngFor="let option of options" class="option-card">
+      <h3>{{ option.title }}</h3><nav>
+       <button [routerLink]="option.route">Ir</button>
+      </nav>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
